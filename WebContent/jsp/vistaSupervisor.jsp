@@ -3,12 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<link rel="stylesheet" href="css/index.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	
+
 	 <header>
       <div class="contenedor">
         <div id="marca">
@@ -16,51 +15,50 @@
         </div>
         <nav>
           <ul>
-            <li class="actual"><a href="index.html">Inicio</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-              <li><a href="login.html">login</a></li>  
+            <li class="Solicitud"><a href="index.html">Solicitud</a></li>
+			<li class="Salir"><a href="index.html">Salir</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section id="cabecera">
-      <div class="contenedor">
-        <h1>Ejecutivos las 24 horas del dia, 7 dias a la semana</h1>
-        <p>Acercate y contactate con nosotros, hecha a volar tu imaginacion y concreta tus proyectos.</p>
-      </div>
-    </section>
-
     <section id="boletin">
       <div class="contenedor">
-        <h1>Quieres que te contacte uno de nuestros ejecutivos</h1>
-        <form>
-          <input type="email" placeholder="Ingrese el Email...">
-          <button type="submit" class="boton1">Subscríbete</button>
-        </form>
+	  <h3 id="Solicitud"><span>S</span><span>o</span><span>l</span><span>i</span><span>c</span><span>i</span><span>t</span><span>u</span><span>d</span> <span>de</span> <span>Credito</span></h3>
+	  <hr style="color: #003BFF" width="45%" noshade="noshade" align="center"></hr>
+	  <div id = "Tablas">
+        <table class="tg">
+  <tr>
+    <th class="tg-w62e">id Solicitud</th>
+    <th class="tg-w62e">Solicitante</th>
+    <th class="tg-w62e">monto_solicitado<br></th>
+    <th class="tg-w62e">numero_cuota</th>
+    <th class="tg-w62e">fecha_autorizacion</th>
+    <th class="tg-w62e">fecha_entrega</th>
+    <th class="tg-vj7c">Estado</th>
+  </tr>
+  <tr>
+    <td class="tg-5sx5"></td>
+    <td class="tg-5sx5"></td>
+    <td class="tg-5sx5"></td>
+    <td class="tg-5sx5"></td>
+    <td class="tg-5sx5"></td>
+    <td class="tg-5sx5"></td>
+    <td class="tg-kcpa"><select>
+										<option value = "0">Aprobado</option>
+										<option value = "1">No Aprobado</option>
+									</select>
+	</td>
+  </tr>
+</table>
+</div>
       </div>
     </section>
 
     <section id="cajas">
-      <div class="contenedor">
-        <div class="caja">
-          <img src="./img/manos.jpg">
-          <h3>SOMOS TU AVAL</h3>
-          <p>somos el unico banco que te ofrece ser tu propio aval, queremos verte sonreir y nosotros contigo</p>
-        </div>
-        <div class="caja">
-          <img src="./img/convenios.jpg">
-          <h3>CONVENIOS</h3>
-          <p>conoce los diferentes convenios que tenemos para que puedas seguir perfeccionandote</p>
-        </div>
-        <div class="caja">
-          <img src="./img/plataforma.png">
-          <h3>PLATAFORMA DIGITAL</h3>
-          <p>conoce nuestra plataforma en la que podras realizar todos tus tramites con un solo click desde tu celular</p>
-        </div>
-      </div>
     </section>
 
+	<div id= "alinearse">
     <footer>
         <div class="container-footer-all">
             <div class="container-body">
@@ -105,6 +103,7 @@
             </div>
           </div>
      </footer>
+	 </div>
 
 </body>
 </html>
