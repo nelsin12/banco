@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-nov-2018 9:41:44 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="pojos.Supervisor" table="supervisor" catalog="banco" optimistic-lock="version">
+        <id name="idSupervisor" type="java.lang.Integer">
+            <column name="id_supervisor" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="persona" class="pojos.Persona" fetch="select">
+            <column name="rut_persona" length="12" not-null="true" />
+        </many-to-one>
+        <property name="claveSupervisor" type="string">
+            <column name="clave_supervisor" length="100" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

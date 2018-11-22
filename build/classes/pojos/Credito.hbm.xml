@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-nov-2018 9:41:44 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="pojos.Credito" table="credito" catalog="banco" optimistic-lock="version">
+        <id name="idSolicitud" type="java.lang.Integer">
+            <column name="id_solicitud" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="cliente" class="pojos.Cliente" fetch="select">
+            <column name="id_cliente" not-null="true" />
+        </many-to-one>
+        <property name="direccionTrabajo" type="string">
+            <column name="direccion_trabajo" length="80" not-null="true" />
+        </property>
+        <property name="montoSolicitado" type="int">
+            <column name="monto_solicitado" not-null="true" />
+        </property>
+        <property name="numeroCuota" type="int">
+            <column name="numero_cuota" not-null="true" />
+        </property>
+        <property name="fechaAutorizacion" type="date">
+            <column name="fecha_autorizacion" length="10" />
+        </property>
+        <property name="fechaEntraga" type="date">
+            <column name="fecha_entraga" length="10" />
+        </property>
+        <property name="estado" type="java.lang.Boolean">
+            <column name="estado" />
+        </property>
+    </class>
+</hibernate-mapping>
