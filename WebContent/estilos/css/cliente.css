@@ -1,0 +1,147 @@
+center h1{
+  font-family: fantasy;
+  background: #DFDFDD;
+  color: #35424a;
+  width: 300px;
+  margin: 30px auto;
+
+}
+
+/*primera tabla*/
+#main-container{
+      /*margen desde arriba de la primera tabla*/
+      margin: 30px auto;
+      /*margen desde la derecha para la primera tabla*/
+      width: 1000px;
+}
+
+.primeratabla th{
+  background: #CBC4C4;
+}
+.segundatabla th{
+  background: #CBC4C4;
+}
+table{
+      background-color: white;
+      /*posicion del texto en las tablas*/
+      text-align: center;
+      width: 100%;
+}
+
+th, td{
+      border: solid 1px black;
+
+}
+
+/*menu ----------------------------------------------------------*/
+.navegacion{
+      width: 900px;
+      margin: 30px auto;
+      background: #35424a;
+}
+
+.navegacion ul{
+      list-style: none;
+}
+
+.menu> li{
+      /*para el submenu*/
+      position: relative;
+      display: inline-block;
+}
+.menu> li >a{
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
+      font-family: 'Open sans';
+      text-decoration: none;
+
+}
+
+.menu li a:hover{
+      /*color cuando pasas mause*/
+      color: #0627F8;
+      transition: all .3s;
+}
+
+/*submenu*/
+.submenu{
+      position: absolute;
+      background: #CFC9C9;
+      width: 130%;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1.5s;
+
+}
+.submenu li a{
+      display: block;
+      padding:  15px;
+      color: black;
+      font-family: 'Open sans';
+      text-decoration: none;
+
+}
+
+.menu li:hover .submenu{
+      visibility: visible;
+      opacity: 1;
+}
+
+
+/*formulario clienteAyuda*/
+main{
+   background-image: url(fondo/891.jpg);
+   background-size: 100vw 100vh;
+   background-attachment: fixed;
+   margin: 0;
+}
+
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+
+}
+h2{
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 20px
+}
+
+input,textarea{
+  width: 100%;
+  margin-bottom: 20PX;
+  padding: fpx;
+  box-sizing: border-box;
+  font-size: 17px;
+  border: none;
+}
+textarea{
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+#boton{
+  background: #31384A;
+  color: #fff;
+  padding: 20px;
+}
+
+#boton:hover{
+   cursor: pointer;
+}
+
+@media (max-width:480px) {
+  form{
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,188 @@
+body{
+    font: 15px Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    background-color:#f4f4f4;
+  }
+
+  /* Estilos globales */
+  .contenedor{
+    width:50%;
+    margin:auto;
+    overflow:hidden;
+  }
+
+  ul{
+    margin:0;
+    padding:0;
+  }
+
+  .boton1{
+    height:38px;
+    background:#e8491d;
+    border:0;
+    padding-left: 20px;
+    padding-right:20px;
+    color:#ffffff;
+  }
+
+  .oscuro{
+    padding:15px;
+    background:#35424a;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+
+  /* Encabezado **/
+  header{
+    background:#24282b;
+    color:#ffffff;
+    padding-top:30px;
+    min-height:70px;
+    border-bottom:#1293d4 5px solid;
+  }
+
+  header a{
+    color:#ffffff;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size:16px;
+  }
+
+  header li{
+    float:left;
+    display:inline;
+    padding: 0 20px 0 20px;
+  }
+
+  header #marca{
+    float:left;
+  }
+
+  header #marca h1{
+    margin:0;
+  }
+
+  header nav{
+    float:right;
+    margin-top:10px;
+  }
+
+  header .resaltado, header .actual a{
+    color:#1293d4;
+    font-weight:bold;
+  }
+
+  header a:hover{
+    color:#cccccc;
+    font-weight:bold;
+  }
+
+  /* Cabecera con imagen */
+  #cabecera{
+    min-height:400px;
+    background:url('../img/cabecera.jpg') no-repeat 0 -400px;
+    text-align:center;
+    color:#ffffff;
+  }
+
+  #cabecera h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+  }
+
+  #cabecera p{
+    font-size:20px;
+  }
+
+  /* Formulario */
+  #boletin{
+    padding:15px;
+    color:#ffffff;
+    background:#24282b;
+  }
+
+  #boletin h1{
+    float:left;
+  }
+
+  #boletin form {
+    float:right;
+    margin-top:15px;
+  }
+
+  #boletin input[type="password"]{
+    padding:4px;
+    height:25px;
+    width:200px;
+  }
+
+/*css de tabla ejecutivo*/
+  #main-container{
+  margin: 50px auto;
+  width: 800px;5}
+table{
+  background-color: white;
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+th, td{
+  padding: 20px;
+}
+thead{
+  background-color: #246355;
+  border-bottom: solid 5px #0f362d;
+  color: white;
+}
+tr:nth-child(even){
+  background-color: #ddd;
+}
+tr:hover td{
+  background-color: #369681;
+  color: white;
+}
+
+  /* Cajas */
+  #cajas{
+    margin-top:20px;
+    background-color:#ffffff
+  }
+
+  #cajas .caja{
+    float:left;
+    text-align: center;
+    width:30%;
+    padding:10px;
+  }
+
+  #cajas .caja img{
+    width:90px;
+  }
+
+  /* Lateral */
+  aside#lateral{
+    float:right;
+    width:30%;
+    margin-top:10px;
+  }
+
+  /* Main-col */
+  article#main-col{
+    float:left;
+    width:65%;
+  }
+
+
+  /* Servicios */
+  ul#servicios li{
+    list-style: none;
+    padding:20px;
+    border: #cccccc solid 1px;
+    margin-bottom:5px;
+    background:#e6e6e6;
+  }
+  

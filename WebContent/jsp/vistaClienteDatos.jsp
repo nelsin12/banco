@@ -4,93 +4,82 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/cliente.css">
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<header>
+
+	 <header>
       <div class="contenedor">
         <div id="marca">
           <h1><span class="resaltado">THINK</span> Siempre pensando en ti</h1>
+          <br>
         </div>
         <nav>
           <ul>
-            <li class="actual"><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Clientes</a></li>
-            <li><a href="servicios.html">Creditos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li class="actual"><a href="#">Cerrar Sesion </a></li>
+            <li><a href="login.html">| X |</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <section id="boletin">
-      <div class="contenedor">
-        <h1>Ingrese su clave de ejecutivo</h1>
-        <form>
-          <input type="password" placeholder="Ingrese clave secreta...">
-          <button onclick="location.href='/vistaBanco/muestraejecutivo.html'" type="submit" class="boton1">Ingresar</button>
-        </form>
-      </div>
-    </section>
-
-    <div id ="main-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Cliente</th>
-            <th>Monto solicitado</th>
-            <th>Numero de cuotas</th>
-            <th>Fecha Autorizacion</th>
-            <th>Fecha de entrega</th>
-            <th>Estado</th>
-          </tr>
-        </thead>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-      </table>
-    </div>
-
-
-
-
+    <br>
+    <br>
+    <!--ACA ESTA EL MENU-->
+    <nav class="navegacion">
+      <ul class="menu">
+        <li><a href="ClienteDatos.html">Informacion Personal</a></li>
+        <li><a href="ClienteSolicitudes.html">Mis Solicitudes</a></li>
+        <li><a href="#">Mis Tranferencias</a>
+           <ul class="submenu">
+                <li><a href="#">Ultimos Movimientos</a></li>
+                <li><a href="#">Transferir</a></li>
+           </ul>
+        </li>
+        <li><a href="ClienteInformaciones.html">Informaciones</a></li>
+        <li><a href="ClienteAyuda.html">Contacto o Ayuda</a></li>
+      </ul>
+    </nav>
+    <main>
+         <br>
+         <center><h1>Mi INFORMACION</h1></center>
+       <div id="main-container">
+         <div class="primeratabla">
+           <table>
+         	  <tr>
+           		<th>RUT</th><th>P.NOMBRE</th><th>S.NOMBRE</th><th>P.APELLIDO</th><th>S.APELLIDO</th><th>TELEFONO</th>
+              <th>DIRECCION</th><th>CORREO</th><th>FECHA DE INGRRESO</th><th>SUELDO</th>
+         	  </tr>
+         	  <tr>
+           		<td>18.466.859-9</td>
+           		<td>juan</td>
+           		<td>alejandro</td>
+           		<td>medina</td>
+           		<td>morales</td>
+           		<td>93453456</td>
+           		<td>Av. dorsal 722</td>
+           		<td>JUAN234@GMAIL.COM</td>
+           		<td>20-OCT-</td>
+           		<td>300000</td>
+           </tr>
+          </table>
+        </div>
+         </div>
+         <br>
+         <br>
+         <br>
+     </main>
+     <br>
+     <br>
+     <br>
     <footer>
         <div class="container-footer-all">
             <div class="container-body">
                <div class="colum1">
                  <h1>Mas Informacion del BANCO</h1>
                      <p>Este banco se encuentra en el segundo puesto de los bancos mas
-                     importantes en todo chile , cuenta con mas de 153 mi clientes y 400 bancos
+                     importantes en too chile , cuenta con mas de 153 mi clientes y 400 bancos
                      a lo largo de todo el pais, funcionando desde 1990 gracias al apoyo
                      de ipBancos y la republica de chile, sede sentral ubicada en moneda 284</p>
               </div>

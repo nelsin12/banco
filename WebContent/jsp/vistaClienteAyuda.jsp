@@ -4,93 +4,71 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/cliente.css">
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<header>
+
+	 <header>
       <div class="contenedor">
         <div id="marca">
           <h1><span class="resaltado">THINK</span> Siempre pensando en ti</h1>
+          <br>
         </div>
         <nav>
           <ul>
-            <li class="actual"><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Clientes</a></li>
-            <li><a href="servicios.html">Creditos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li class="actual"><a href="#">Cerrar Sesion </a></li>
+            <li><a href="login.html">| X |</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <section id="boletin">
-      <div class="contenedor">
-        <h1>Ingrese su clave de ejecutivo</h1>
-        <form>
-          <input type="password" placeholder="Ingrese clave secreta...">
-          <button onclick="location.href='/vistaBanco/muestraejecutivo.html'" type="submit" class="boton1">Ingresar</button>
-        </form>
-      </div>
-    </section>
-
-    <div id ="main-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Cliente</th>
-            <th>Monto solicitado</th>
-            <th>Numero de cuotas</th>
-            <th>Fecha Autorizacion</th>
-            <th>Fecha de entrega</th>
-            <th>Estado</th>
-          </tr>
-        </thead>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-      </table>
-    </div>
-
-
-
-
+    <br>
+    <br>
+    <!--ACA ESTA EL MENU-->
+    <nav class="navegacion">
+      <ul class="menu">
+        <li><a href="ClienteDatos.html">Informacion Personal</a></li>
+        <li><a href="ClienteSolicitudes.html">Mis Solicitudes</a></li>
+        <li><a href="#">Mis Tranferencias</a>
+           <ul class="submenu">
+                <li><a href="#">Ultimos Movimientos</a></li>
+                <li><a href="#">Transferir</a></li>
+           </ul>
+        </li>
+        <li><a href="ClienteInformaciones.html">Informaciones</a></li>
+        <li><a href="ClienteAyuda.html">Contacto o Ayuda</a></li>
+      </ul>
+    </nav>
+    <main>
+         <br>
+         <br>
+         <!--formulario-->
+         <form action="">
+           <h2>Contacto</h2>
+           <input type="text" name="Nombre" placeholder="Nombre">
+           <input type="text" name="Correo" placeholder="Correo">
+           <input type="text" name="Telefono" placeholder="Telefono">
+           <textarea name="mensaje" placeholder="Escriba Aqui Su
+           Mensaje">
+           </textarea>
+           <input type="button" value="Enviar" id="boton">
+         </form>
+         <br>
+         <br>
+     </main>
+     <br>
+     <br>
+     <br>
+     <br>
     <footer>
         <div class="container-footer-all">
             <div class="container-body">
                <div class="colum1">
                  <h1>Mas Informacion del BANCO</h1>
                      <p>Este banco se encuentra en el segundo puesto de los bancos mas
-                     importantes en todo chile , cuenta con mas de 153 mi clientes y 400 bancos
+                     importantes en too chile , cuenta con mas de 153 mi clientes y 400 bancos
                      a lo largo de todo el pais, funcionando desde 1990 gracias al apoyo
                      de ipBancos y la republica de chile, sede sentral ubicada en moneda 284</p>
               </div>
@@ -128,5 +106,6 @@
             </div>
           </div>
      </footer>
+
 </body>
 </html>
