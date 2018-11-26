@@ -5,13 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Inicio de Sesion</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../estilos/css/login.css">
 <title>Insert title here</title>
 </head>
 <body>
 
 	<div class="login-box">
-      <img src="img/logo 4.png" class="avatar" alt="Avatar Image">
+      <img src="../img/img/logo 4.png" class="avatar" alt="Avatar Image">
       <h1>Cuenta</h1>
       <form>
         <!-- USERNAME INPUT -->

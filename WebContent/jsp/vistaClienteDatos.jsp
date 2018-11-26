@@ -19,7 +19,7 @@
         <nav>
           <ul>
             <li class="actual"><a href="#">Cerrar Sesion </a></li>
-            <li><a href="login.html">| X |</a></li>
+            <li><a href="Formulario.jsp">| X |</a></li>
           </ul>
         </nav>
       </div>

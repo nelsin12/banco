@@ -16,9 +16,9 @@
         </div>
         <nav>
           <ul>
-            <li class="actual"><a href="index.html">Inicio</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-              <li><a href="login.html">login</a></li>  
+            <li class="actual"><a href="index.jsp">Inicio</a></li>
+            <li><a href="vistacontacto.jsp">Contacto</a></li>
+              <li><a href="formulario.jsp">login</a></li>  
           </ul>
         </nav>
       </div>

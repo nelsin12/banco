@@ -23,7 +23,6 @@ public class Servlet extends HttpServlet{
 	
 	
 	
-	
 	public void doPost(HttpServletRequest request,HttpResponse response){
 		
 		String rut = request.getParameter("rut");
@@ -33,14 +32,14 @@ public class Servlet extends HttpServlet{
 		cliente.setClave_cliente(pass);
 		DaoCliente daocliente = new DaoCliente();
 		if(daocliente.Logins(cliente)){
-			RequestDispatcher request_dispatcher = request.getRequestDispatcher("index.html");
+			RequestDispatcher request_dispatcher = request.getRequestDispatcher("index.jsp");
 			try {
 				request_dispatcher.forward(request, (ServletResponse) response);
 			} catch (ServletException | IOException e) {				
 				e.printStackTrace();
 			}
 		}else{
-			RequestDispatcher request_dispatcher = request.getRequestDispatcher("login.html");
+			RequestDispatcher request_dispatcher = request.getRequestDispatcher("Formulario.jsp");
 			try {
 				request_dispatcher.forward(request, (ServletResponse) response);
 			} catch (ServletException | IOException e) {				
@@ -48,5 +47,7 @@ public class Servlet extends HttpServlet{
 			}
 		}
 	}
+	
+	
 
 }
