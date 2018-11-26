@@ -1,5 +1,5 @@
 package pojos;
-// Generated 14-nov-2018 9:41:42 by Hibernate Tools 4.3.1.Final
+// Generated 26-nov-2018 16:00:00 by Hibernate Tools 4.3.1.Final
 
 import java.util.Date;
 
@@ -8,42 +8,50 @@ import java.util.Date;
  */
 public class Credito implements java.io.Serializable {
 
-	private Integer idSolicitud;
+	private Integer id;
 	private Cliente cliente;
-	private String direccionTrabajo;
-	private int montoSolicitado;
-	private int numeroCuota;
-	private Date fechaAutorizacion;
-	private Date fechaEntraga;
-	private Boolean estado;
+	private Usuario usuario;
+	private String folio;
+	private int monto;
+	private int numCuotas;
+	private boolean estado;
+	private Date creadoEl;
+	private Date aprobadoEl;
+	private Date entregadoEl;
 
 	public Credito() {
 	}
 
-	public Credito(Cliente cliente, String direccionTrabajo, int montoSolicitado, int numeroCuota) {
+	public Credito(Cliente cliente, Usuario usuario, String folio, int monto, int numCuotas, boolean estado,
+			Date creadoEl) {
 		this.cliente = cliente;
-		this.direccionTrabajo = direccionTrabajo;
-		this.montoSolicitado = montoSolicitado;
-		this.numeroCuota = numeroCuota;
-	}
-
-	public Credito(Cliente cliente, String direccionTrabajo, int montoSolicitado, int numeroCuota,
-			Date fechaAutorizacion, Date fechaEntraga, Boolean estado) {
-		this.cliente = cliente;
-		this.direccionTrabajo = direccionTrabajo;
-		this.montoSolicitado = montoSolicitado;
-		this.numeroCuota = numeroCuota;
-		this.fechaAutorizacion = fechaAutorizacion;
-		this.fechaEntraga = fechaEntraga;
+		this.usuario = usuario;
+		this.folio = folio;
+		this.monto = monto;
+		this.numCuotas = numCuotas;
 		this.estado = estado;
+		this.creadoEl = creadoEl;
 	}
 
-	public Integer getIdSolicitud() {
-		return this.idSolicitud;
+	public Credito(Cliente cliente, Usuario usuario, String folio, int monto, int numCuotas, boolean estado,
+			Date creadoEl, Date aprobadoEl, Date entregadoEl) {
+		this.cliente = cliente;
+		this.usuario = usuario;
+		this.folio = folio;
+		this.monto = monto;
+		this.numCuotas = numCuotas;
+		this.estado = estado;
+		this.creadoEl = creadoEl;
+		this.aprobadoEl = aprobadoEl;
+		this.entregadoEl = entregadoEl;
 	}
 
-	public void setIdSolicitud(Integer idSolicitud) {
-		this.idSolicitud = idSolicitud;
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public Cliente getCliente() {
@@ -54,52 +62,68 @@ public class Credito implements java.io.Serializable {
 		this.cliente = cliente;
 	}
 
-	public String getDireccionTrabajo() {
-		return this.direccionTrabajo;
+	public Usuario getUsuario() {
+		return this.usuario;
 	}
 
-	public void setDireccionTrabajo(String direccionTrabajo) {
-		this.direccionTrabajo = direccionTrabajo;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
-	public int getMontoSolicitado() {
-		return this.montoSolicitado;
+	public String getFolio() {
+		return this.folio;
 	}
 
-	public void setMontoSolicitado(int montoSolicitado) {
-		this.montoSolicitado = montoSolicitado;
+	public void setFolio(String folio) {
+		this.folio = folio;
 	}
 
-	public int getNumeroCuota() {
-		return this.numeroCuota;
+	public int getMonto() {
+		return this.monto;
 	}
 
-	public void setNumeroCuota(int numeroCuota) {
-		this.numeroCuota = numeroCuota;
+	public void setMonto(int monto) {
+		this.monto = monto;
 	}
 
-	public Date getFechaAutorizacion() {
-		return this.fechaAutorizacion;
+	public int getNumCuotas() {
+		return this.numCuotas;
 	}
 
-	public void setFechaAutorizacion(Date fechaAutorizacion) {
-		this.fechaAutorizacion = fechaAutorizacion;
+	public void setNumCuotas(int numCuotas) {
+		this.numCuotas = numCuotas;
 	}
 
-	public Date getFechaEntraga() {
-		return this.fechaEntraga;
-	}
-
-	public void setFechaEntraga(Date fechaEntraga) {
-		this.fechaEntraga = fechaEntraga;
-	}
-
-	public Boolean getEstado() {
+	public boolean isEstado() {
 		return this.estado;
 	}
 
-	public void setEstado(Boolean estado) {
+	public void setEstado(boolean estado) {
 		this.estado = estado;
+	}
+
+	public Date getCreadoEl() {
+		return this.creadoEl;
+	}
+
+	public void setCreadoEl(Date creadoEl) {
+		this.creadoEl = creadoEl;
+	}
+
+	public Date getAprobadoEl() {
+		return this.aprobadoEl;
+	}
+
+	public void setAprobadoEl(Date aprobadoEl) {
+		this.aprobadoEl = aprobadoEl;
+	}
+
+	public Date getEntregadoEl() {
+		return this.entregadoEl;
+	}
+
+	public void setEntregadoEl(Date entregadoEl) {
+		this.entregadoEl = entregadoEl;
 	}
 
 }

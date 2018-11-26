@@ -1,6 +1,7 @@
 package pojos;
-// Generated 14-nov-2018 9:41:42 by Hibernate Tools 4.3.1.Final
+// Generated 26-nov-2018 16:00:00 by Hibernate Tools 4.3.1.Final
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,65 +10,98 @@ import java.util.Set;
  */
 public class Cliente implements java.io.Serializable {
 
-	private Integer idCliente;
-	private Persona persona;
-	private String claveCliente;
-	private int cantidadCreditos;
-	private Set creditos = new HashSet(0);
+	private Integer id;
+	private Usuario usuario;
+	private int fono;
+	private int sueldo;
+	private String direccionParticular;
+	private String direccionLaboral;
+	private Date creadoEl;
+	private Set<Credito> creditos = new HashSet<Credito>(0);
 
 	public Cliente() {
 	}
 
-	public Cliente(Persona persona, String claveCliente, int cantidadCreditos) {
-		this.persona = persona;
-		this.claveCliente = claveCliente;
-		this.cantidadCreditos = cantidadCreditos;
+	public Cliente(int fono, int sueldo, String direccionParticular, String direccionLaboral, Date creadoEl) {
+		this.fono = fono;
+		this.sueldo = sueldo;
+		this.direccionParticular = direccionParticular;
+		this.direccionLaboral = direccionLaboral;
+		this.creadoEl = creadoEl;
 	}
 
-	public Cliente(Persona persona, String claveCliente, int cantidadCreditos, Set creditos) {
-		this.persona = persona;
-		this.claveCliente = claveCliente;
-		this.cantidadCreditos = cantidadCreditos;
+	public Cliente(Usuario usuario, int fono, int sueldo, String direccionParticular, String direccionLaboral,
+			Date creadoEl, Set<Credito> creditos) {
+		this.usuario = usuario;
+		this.fono = fono;
+		this.sueldo = sueldo;
+		this.direccionParticular = direccionParticular;
+		this.direccionLaboral = direccionLaboral;
+		this.creadoEl = creadoEl;
 		this.creditos = creditos;
 	}
 
-	public Integer getIdCliente() {
-		return this.idCliente;
+	public Integer getId() {
+		return this.id;
 	}
 
-	public void setIdCliente(Integer idCliente) {
-		this.idCliente = idCliente;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-	public Persona getPersona() {
-		return this.persona;
+	public Usuario getUsuario() {
+		return this.usuario;
 	}
 
-	public void setPersona(Persona persona) {
-		this.persona = persona;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
-	public String getClaveCliente() {
-		return this.claveCliente;
+	public int getFono() {
+		return this.fono;
 	}
 
-	public void setClaveCliente(String claveCliente) {
-		this.claveCliente = claveCliente;
+	public void setFono(int fono) {
+		this.fono = fono;
 	}
 
-	public int getCantidadCreditos() {
-		return this.cantidadCreditos;
+	public int getSueldo() {
+		return this.sueldo;
 	}
 
-	public void setCantidadCreditos(int cantidadCreditos) {
-		this.cantidadCreditos = cantidadCreditos;
+	public void setSueldo(int sueldo) {
+		this.sueldo = sueldo;
 	}
 
-	public Set getCreditos() {
+	public String getDireccionParticular() {
+		return this.direccionParticular;
+	}
+
+	public void setDireccionParticular(String direccionParticular) {
+		this.direccionParticular = direccionParticular;
+	}
+
+	public String getDireccionLaboral() {
+		return this.direccionLaboral;
+	}
+
+	public void setDireccionLaboral(String direccionLaboral) {
+		this.direccionLaboral = direccionLaboral;
+	}
+
+	public Date getCreadoEl() {
+		return this.creadoEl;
+	}
+
+	public void setCreadoEl(Date creadoEl) {
+		this.creadoEl = creadoEl;
+	}
+
+	public Set<Credito> getCreditos() {
 		return this.creditos;
 	}
 
-	public void setCreditos(Set creditos) {
+	public void setCreditos(Set<Credito> creditos) {
 		this.creditos = creditos;
 	}
 
