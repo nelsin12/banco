@@ -33,20 +33,24 @@ public class IngresarUsuarioServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		//Se crea objeto usuario de la capa "negocio" (package ejb)
-		EjbUsuario ejbUsario = new  EjbUsuario();
+		EjbUsuario ejbUsuario = new  EjbUsuario();
 		EjbPerfil ejbPerfil = new EjbPerfil();
 		
 		
 		//Se crea objeto usuario de la capa "datos" (package pojos)
 		Usuario pojosUsuario = new Usuario();
 		Perfil pojosPerfil = new Perfil();
+		Integer test = Integer.parseInt(request.getParameter("cmb_perfil"));
+		pojosPerfil = ejbPerfil.getPerfilByID(test);
 		
 		pojosUsuario.setNombre(request.getParameter("txt_nombre"));
 		pojosUsuario.setAlias(request.getParameter("txt_alias"));
 		pojosUsuario.setClave(request.getParameter("txt_clave"));
-		pojosUsuario.setPerfil(ejbPerfil.getPerfilByID(request.getParameter("cmb_perfil")));
-		pojosUsuario.setNombre(request.getParameter("txt_nombre"));
-		pojosUsuario.setNombre(request.getParameter("txt_nombre"));
+		pojosUsuario.setPerfil(pojosPerfil);
+		pojosUsuario.setRut(request.getParameter("txt_nombre"));
+		pojosUsuario.setIdSucursal(Integer.parseInt(request.getParameter("txt_sucursal")));
+		
+		ejbUsuario.IngresarUsuario(pojosUsuario);		
 	}
 
 }

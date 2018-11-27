@@ -1,37 +1,38 @@
 package dao;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
+import pojos.Cliente;
+import pojos.Usuario;
 import hibernateUtil.HibernateUtil;
-import pojos.Perfil;
 
-public class DaoPerfil {
+public class DaoCliente {
 
 	//Se define variable Sesion para comunicacion con BD.
 	private static Session session;
-	
-	
-	//Metodo obtiene registro de Perfil en base a ID
-	
-	public static Perfil getPerfilByID(Integer perfil_id){
-				
+			
+			
+	//Metodo obtiene registro de Perfil en base a ID			
+	public static boolean checkUserByRUT(Cliente cliente){
+		
+		boolean check = true;
 		//Se instancia nueva sesion a partir de Clase SessionFactory de HibernateUtil.
 		session = HibernateUtil.getSessionFactory().openSession();
-   	 
-		String query_string = "FROM perfil WHERE id = :id";
+		   	 
+		String query_string = "FROM cliente WHERE rut = :rut";
 		Query query = session.createQuery(query_string);
-		query.setParameter("id",perfil_id);
+		//TODO: Corregir DB
+		query.setParameter("rut",cliente.getRUT());
 		List results = query.list();
 		
-		Perfil perfil = new Perfil();
-		perfil = (Perfil) results.get(0);
+		if(results.size() == 0){
+			check = false;
+		}
 		
-		return perfil;
-
+		return check;
+		
 	}
 }
