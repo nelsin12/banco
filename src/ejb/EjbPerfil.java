@@ -11,7 +11,8 @@ public class EjbPerfil {
 		pojosPerfil = new Perfil();
 	}
 	
-	public Perfil getPerfilByID(Integer perfil_id){
+	//¿basicamente que hace esta linea?
+	public Perfil getPerfilByID(Integer perfil_id){//¿el byid solo tare el id?
 		try{
 			pojosPerfil = DaoPerfil.getPerfilByID(perfil_id);
 			return pojosPerfil;

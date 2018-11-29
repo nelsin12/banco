@@ -15,7 +15,7 @@ public class EjbCredito {
 
 	private Credito pojosCredito;
 	
-	public static final Integer ESTADO_CREDITO_APROBADO = 1;
+	public static final Integer ESTADO_CREDITO_APROBADO = 1;//¿lo defino como siempre aprobado?
 	
 	public EjbCredito(){
 		pojosCredito = new Credito();
@@ -24,6 +24,8 @@ public class EjbCredito {
 	public List<String> validarSolicitud(Credito credito, Cliente cliente){
 		List<String> errores = new ArrayList<>();
 		
+		//¿todos estos metodos estan llamando a algun metodo del dao?
+		
 		//Validar si usuario es cliente
 		if(!EjbCliente.checkUserByRUT(cliente)){
 			errores.add("Solo se permite la solicitud de creditos a clientes registrados.");
@@ -31,9 +33,12 @@ public class EjbCredito {
 		}
 		
 		//Se valida que el monto solicitado no exceda el 150% del sueldo del cliente.
+		//¿se parsea porque el monto es entero y se definio como double, porque hacer eso y no decirle 
+		//	de un principio que sea integer?
 		double factor = Double.parseDouble(EjbConfig.getConfigByID(EjbConfig.CONFIG_FACTOR_MAX_CREDITO));		
 		if(cliente.getSueldo()*factor < credito.getMonto()){
-			errores.add("Monto excede 150% del sueldo.");
+			errores.add("Monto excede 150% del sueldo.");//esta variable factor almacena el factor maximo del credito
+														// que es 1.5, la cual esta en la bd
 		}
 		
 		//Se valida que el monto solicitado cumpla el monto minimo.
@@ -42,7 +47,7 @@ public class EjbCredito {
 			errores.add("Monto debe ser al menos $300.000.");
 		}
 		
-		//Se valida que banco pueda cursar el credito.
+		//Se valida que banco pueda cursar el credito.//¿en bd aparesen los datos como llave valor?
 		Integer tope_credito = Integer.parseInt(EjbConfig.getConfigByID(EjbConfig.CONFIG_TOPE_CREDITO));
 		Integer suma_creditos = this.getMontosCreditosAprobados();
 		if(suma_creditos + credito.getMonto() > tope_credito){
@@ -61,13 +66,14 @@ public class EjbCredito {
 		if(antiguedad_cliente < min_antiguedad){
 			errores.add("Solo puede pedir creditos si es que tiene mas de 6 meses de antiguedad.");
 		}
+		
 		return errores;
 	}
-	
+	//¿este metodo llama al dao para traer todos los montos aprobados?¿con que fin? 
 	public Integer getMontosCreditosAprobados(){
 		
 		List<Integer> montos = DaoCredito.getMontosCreditosAprobados();		
-		return montos.stream().mapToInt(Integer::intValue).sum();
+		return montos.stream().mapToInt(Integer::intValue).sum();//¿que hace essta linea?
 		
 	}
 }

@@ -11,6 +11,7 @@ public class EjbUsuario {
 		pojosUsuario = new Usuario();
 	}
 	
+	//¿metodo que ingresa a un usuario?
 	public boolean IngresarUsuario(Usuario usuario){
 		try{
 			boolean ingreso = DaoUsuario.IngresarUsuario(usuario);			
@@ -20,13 +21,13 @@ public class EjbUsuario {
 			return false;
 		}
 	}
-	
+	//¿	metodo que comprueba si un usuario es un usuario?
 	public boolean LoginUsuario(Usuario usuario){
 		try{
 			boolean ingreso = DaoUsuario.LoginUsuario(usuario);			
 			return ingreso;
 		}catch(Exception e){
-			System.out.println(e.getMessage());
+			System.out.println(e.getMessage());//¿cual es el mensaje si es que llegara a fallar?
 			return false;
 		}
 	}

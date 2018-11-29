@@ -8,6 +8,7 @@ public class EjbConfig {
 
 	private Config pojosConfig;
 	
+	//no tiene sentido usar memoria cada vez que inicialisemos objetos 
 	public static final Integer CONFIG_TOPE_CREDITO = 1;
 	public static final Integer CONFIG_MIN_CREDITO = 2;
 	public static final Integer CONFIG_NUM_MIN_CUOTAS = 3;
@@ -16,14 +17,14 @@ public class EjbConfig {
 	public static final Integer CONFIG_FACTOR_MAX_CREDITO = 6;
 	
 	public EjbConfig(){
-		pojosConfig = new Config();
+		pojosConfig = new Config();//creo el objeto config
 	}
 	
 	public static String getConfigByID(Integer config_id){
 		
 		String value = "";
 		try{
-			value = DaoConfig.getConfigByID(config_id);
+			value = DaoConfig.getConfigByID(config_id);//llamo al dao.config 
 			return value;
 		}catch(Exception e){
 			System.out.println(e.getMessage());

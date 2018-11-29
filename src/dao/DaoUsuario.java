@@ -26,17 +26,17 @@ public class DaoUsuario {
 		session = HibernateUtil.getSessionFactory().openSession();
    	 
 		//Inicias una transaccion. Transaccion es el canal por el cual se comunicara el prgrama con la BD.
-        session.beginTransaction();
+        session.beginTransaction();//¿porque en los demas metodos no se inicia una transaccion?
         
         //Insertar un nuevo registro de Usuario a partir del objeto entregado como parametro
         Integer id_usuario = (Integer)session.save(usuario);
         
-        if(id_usuario > 0){
+        if(id_usuario > 0){//¿podria a ver sido distinto de null tambien?
         	insert = true;
         }
         
         //Confirma la insercion del registro
-        session.getTransaction().commit();
+        session.getTransaction().commit();//¿para que sirvia el commit?
         
         //Se cierra sesion
         session.close();
