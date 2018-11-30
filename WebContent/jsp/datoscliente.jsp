@@ -9,7 +9,11 @@
 <title>Informacion del cliente</title>
 </head>
 <body>
-
+	<%
+		if(session.getAttribute("username") == null){
+			response.sendRedirect("login.jsp");
+		}
+	%>
 	<header>
 	<div class="contenedor">
 		<div id="marca">

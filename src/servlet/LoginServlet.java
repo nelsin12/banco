@@ -39,11 +39,31 @@ public class LoginServlet extends HttpServlet {
 		Usuario pojosUsuario = new Usuario();
 		
 		//Se setean atributos de Usuario en base a informacion formulario (vista)
-		pojosUsuario.setAlias(request.getParameter("usuario"));
+		String alias = request.getParameter("usuario");
+		pojosUsuario.setAlias(alias);
 		pojosUsuario.setClave(request.getParameter("clave"));
 		
 		//Se llama a metodo LoginUsuario definido en clase EjbUsuario.
-		ejbUsuario.LoginUsuario(pojosUsuario);
+		boolean login = ejbUsuario.LoginUsuario(pojosUsuario);
+		
+		if(login) {
+			Usuario usuario = ejbUsuario.getUsuarioByUserName(alias);
+			Integer perfil_id = usuario.getPerfil().getId();
+			
+			switch(perfil_id) {
+				case 1:
+					response.sendRedirect("vistasupervisor.jsp");
+					break;
+				case 2:
+					response.sendRedirect("vistaejecutivo.jsp");
+					break;
+				case 3:
+					response.sendRedirect("datoscliente.jsp");
+					break;
+			}
+		}else {
+			response.sendRedirect("login.jsp");
+		}
 		
 	}
 

@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import hibernateUtil.HibernateUtil;
+import pojos.Perfil;
 import pojos.Usuario;
 
 
@@ -57,6 +58,20 @@ public class DaoUsuario {
         
         //Se retorna valor de insercion
         return insert;
+	}
+	
+	public static Usuario getUsuarioByUserName(String username){
+		
+		session = HibernateUtil.getSessionFactory().openSession();
+   	 
+		String query_string = "FROM usuario WHERE alias = :alias";
+		Query query = session.createQuery(query_string);
+		query.setParameter("alias",username);
+		List results = query.list();
+		
+		Usuario usuario = new Usuario();
+		return (Usuario) results.get(0);
+
 	}
 	
 	public static boolean LoginUsuario(Usuario usuario){

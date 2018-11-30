@@ -12,7 +12,7 @@
 	<div class="login-box">
 		<img src="img/logo 4.png" class="avatar" alt="Avatar Image">
 		<h1>Cuenta</h1>
-		<form>
+		<form action="LoginServlet">
 			<!-- USERNAME INPUT -->
 			<label for="username">Usuario</label> <input type="text"
 				placeholder="Ingresar Usuario">

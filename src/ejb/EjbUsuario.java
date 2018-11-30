@@ -32,4 +32,14 @@ public class EjbUsuario {
 		}
 	}
 	
+	public Usuario getUsuarioByUserName(String username){
+		try{
+			Usuario usuario = DaoUsuario.getUsuarioByUserName(username);			
+			return usuario;
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+	
 }
