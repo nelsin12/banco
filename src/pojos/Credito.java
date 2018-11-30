@@ -8,6 +8,10 @@ import java.util.Date;
  */
 public class Credito implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7239949494216755935L;
 	private Integer id;
 	private Cliente cliente;
 	private Usuario usuario;

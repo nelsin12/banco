@@ -6,9 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import ejb.EjbCredito;
-import pojos.Credito;
 import hibernateUtil.HibernateUtil;
-import pojos.Perfil;
 
 public class DaoCredito {
 

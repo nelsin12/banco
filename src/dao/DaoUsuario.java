@@ -1,14 +1,11 @@
 package dao;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import hibernateUtil.HibernateUtil;
-import pojos.Perfil;
 import pojos.Usuario;
 
 

@@ -10,6 +10,10 @@ import java.util.Set;
  */
 public class Cliente implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6810746298928274396L;
 	private Integer id;
 	private Usuario usuario;
 	private int fono;

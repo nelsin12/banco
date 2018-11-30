@@ -6,6 +6,10 @@ package pojos;
  */
 public class Sucursal implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5410931086297350565L;
 	private Integer id;
 	private String nombre;
 	private String direccion;

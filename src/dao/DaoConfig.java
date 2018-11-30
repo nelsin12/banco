@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import hibernateUtil.HibernateUtil;
-import pojos.Perfil;
 
 public class DaoConfig {
 

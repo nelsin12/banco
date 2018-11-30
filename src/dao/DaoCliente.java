@@ -6,8 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import pojos.Cliente;
-import pojos.Perfil;
-import pojos.Usuario;
 import hibernateUtil.HibernateUtil;
 
 public class DaoCliente {

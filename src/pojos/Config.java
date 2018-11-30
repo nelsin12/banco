@@ -6,6 +6,10 @@ package pojos;
  */
 public class Config implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7507466454655531166L;
 	private Integer id;
 	private String llave;
 	private String valor;

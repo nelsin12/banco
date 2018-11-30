@@ -9,6 +9,10 @@ import java.util.Set;
  */
 public class Usuario implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2039398173002456974L;
 	private Integer id;
 	private Perfil perfil;
 	private String nombre;

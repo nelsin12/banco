@@ -1,15 +1,12 @@
 package ejb;
 
 import dao.DaoCliente;
-import dao.DaoPerfil;
 import pojos.Cliente;
 
 public class EjbCliente {
 
-	private Cliente pojosCliente;
-	
 	public EjbCliente(){
-		pojosCliente = new Cliente();
+		new Cliente();
 	}
 	
 	public static boolean checkUserByRUT(Cliente cliente){

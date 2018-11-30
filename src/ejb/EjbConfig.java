@@ -1,13 +1,10 @@
 package ejb;
 
 import dao.DaoConfig;
-import dao.DaoPerfil;
 import pojos.Config;
 
 public class EjbConfig {
 
-	private Config pojosConfig;
-	
 	//no tiene sentido usar memoria cada vez que inicialisemos objetos 
 	public static final Integer CONFIG_TOPE_CREDITO = 1;
 	public static final Integer CONFIG_MIN_CREDITO = 2;
@@ -17,7 +14,7 @@ public class EjbConfig {
 	public static final Integer CONFIG_FACTOR_MAX_CREDITO = 6;
 	
 	public EjbConfig(){
-		pojosConfig = new Config();//creo el objeto config
+		new Config();
 	}
 	
 	public static String getConfigByID(Integer config_id){

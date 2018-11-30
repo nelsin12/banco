@@ -9,6 +9,10 @@ import java.util.Set;
  */
 public class Perfil implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4523259729503140122L;
 	private Integer id;
 	private String nombre;
 	private Set<Usuario> usuarios = new HashSet<Usuario>(0);
