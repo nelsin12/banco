@@ -23,7 +23,7 @@ public class DaoPerfil {
 		//Se instancia nueva sesion a partir de Clase SessionFactory de HibernateUtil.
 		session = HibernateUtil.getSessionFactory().openSession();
    	 
-		String query_string = "FROM perfil WHERE id = :id";//¿falto el select?
+		String query_string = "FROM perfil WHERE id = :id";//¿falto el select? => hibernate no lleva select cuando requieres todas las columnas.
 		Query query = session.createQuery(query_string);
 		query.setParameter("id",perfil_id);
 		List results = query.list();

@@ -24,7 +24,7 @@ public class EjbCredito {
 	public List<String> validarSolicitud(Credito credito, Cliente cliente){
 		List<String> errores = new ArrayList<>();
 		
-		//¿todos estos metodos estan llamando a algun metodo del dao?
+		//¿todos estos metodos estan llamando a algun metodo del dao? => SI.
 		
 		//Validar si usuario es cliente
 		if(!EjbCliente.checkUserByRUT(cliente)){
@@ -34,7 +34,7 @@ public class EjbCredito {
 		
 		//Se valida que el monto solicitado no exceda el 150% del sueldo del cliente.
 		//¿se parsea porque el monto es entero y se definio como double, porque hacer eso y no decirle 
-		//	de un principio que sea integer?
+		//	de un principio que sea integer? => El dato obtenido desde la DB es un String y el string se parsea a Double.
 		double factor = Double.parseDouble(EjbConfig.getConfigByID(EjbConfig.CONFIG_FACTOR_MAX_CREDITO));		
 		if(cliente.getSueldo()*factor < credito.getMonto()){
 			errores.add("Monto excede 150% del sueldo.");//esta variable factor almacena el factor maximo del credito
@@ -47,7 +47,7 @@ public class EjbCredito {
 			errores.add("Monto debe ser al menos $300.000.");
 		}
 		
-		//Se valida que banco pueda cursar el credito.//¿en bd aparesen los datos como llave valor?
+		//Se valida que banco pueda cursar el credito.//¿en bd aparesen los datos como llave valor? => SI.
 		Integer tope_credito = Integer.parseInt(EjbConfig.getConfigByID(EjbConfig.CONFIG_TOPE_CREDITO));
 		Integer suma_creditos = this.getMontosCreditosAprobados();
 		if(suma_creditos + credito.getMonto() > tope_credito){
@@ -69,11 +69,11 @@ public class EjbCredito {
 		
 		return errores;
 	}
-	//¿este metodo llama al dao para traer todos los montos aprobados?¿con que fin? 
+	//¿este metodo llama al dao para traer todos los montos aprobados?¿con que fin? => Hay un tope de monto en el banco por todos sus creditos. NO debemos exceder este valor en la solicitud.
 	public Integer getMontosCreditosAprobados(){
 		
 		List<Integer> montos = DaoCredito.getMontosCreditosAprobados();		
-		return montos.stream().mapToInt(Integer::intValue).sum();//¿que hace essta linea?
+		return montos.stream().mapToInt(Integer::intValue).sum();//¿que hace essta linea? => Obtiene la suma de los elementos de la lista.
 		
 	}
 }

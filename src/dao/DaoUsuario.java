@@ -17,6 +17,23 @@ public class DaoUsuario {
 	//Se define variable Sesion para comunicacion con BD.
 	private static Session session;
 	
+	public static Usuario getUsuarioByID(Integer id){
+		
+		//Se instancia nueva sesion a partir de Clase SessionFactory de HibernateUtil.
+		session = HibernateUtil.getSessionFactory().openSession();
+   	 
+		String query_string = "FROM usuario WHERE id = :id";
+		Query query = session.createQuery(query_string);
+		query.setParameter("id",id);
+		List results = query.list();
+		
+		Usuario usuario = new Usuario();
+		usuario = (Usuario) results.get(0);
+		
+		return usuario;
+
+	}
+	
 	//Metodo permite ingreso de objeto Usuario a  BD.
 	public static boolean IngresarUsuario(Usuario usuario){
 		//Se inicializa variable de retorno como falso (en caso de que falle).
@@ -31,7 +48,7 @@ public class DaoUsuario {
         //Insertar un nuevo registro de Usuario a partir del objeto entregado como parametro
         Integer id_usuario = (Integer)session.save(usuario);
         
-        if(id_usuario > 0){//¿podria a ver sido distinto de null tambien?
+        if(id_usuario > 0){//¿podria a ver sido distinto de null tambien? => Siempre es distinto a null, en nigun caso es null.
         	insert = true;
         }
         

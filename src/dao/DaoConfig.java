@@ -26,7 +26,7 @@ public class DaoConfig {
 			query.setParameter("id",config_id);
 			List results = query.list();
 			
-			return (String) results.get(0);//que hace esta ultima linea
+			return (String) results.get(0);//que hace esta ultima linea => Obtiene el primer resultado de la lista.
 
 		}
 }
