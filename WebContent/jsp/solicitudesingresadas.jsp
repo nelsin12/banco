@@ -4,8 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="css/index.css">
-<title>pagina principal</title>
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/cliente.css">
+<title>solicitudes ingresadas</title>
 </head>
 <body>
 
@@ -15,59 +16,71 @@
 			<h1>
 				<span class="resaltado">THINK</span> Siempre pensando en ti
 			</h1>
+			<br>
 		</div>
 		<nav>
 		<ul>
-			<li class="actual"><a href="index.html">Inicio</a></li>
-			<li><a href="contacto.html">Contacto</a></li>
-			<li><a href="login.html">Ingresar</a></li>
-			<li><a href="SolicitudCredito.html">solicitar credito</a></li>
+			<li class="actual"><a href="#">Cerrar Sesion </a></li>
+			<li><a href="login.html">| X |</a></li>
 		</ul>
 		</nav>
 	</div>
 	</header>
-
-	<section id="cabecera">
-	<div class="contenedor">
-		<h1>Ejecutivos las 24 horas del dia, 7 dias a la semana</h1>
-		<p>Acercate y contactate con nosotros, hecha a volar tu
-			imaginacion y concreta tus proyectos.</p>
+	<br>
+	<br>
+	<!--ACA ESTA EL MENU-->
+	<nav class="navegacion">
+	<ul class="menu">
+		<li><a href="ClienteDatos.html">Informacion Personal</a></li>
+		<li><a href="ClienteSolicitudes.html">Mis Solicitudes</a></li>
+		<li><a href="#">Mis Tranferencias</a>
+			<ul class="submenu">
+				<li><a href="ClienteMovimientos.html">Ultimos Movimientos</a></li>
+				<li><a href="ClienteTransferencia.html">Transferir</a></li>
+			</ul></li>
+		<li><a href="ClienteInformaciones.html">Informaciones</a></li>
+		<li><a href="ClienteAyuda.html">Contacto o Ayuda</a></li>
+	</ul>
+	</nav>
+	<main> <seccion> <br>
+	<CENTER>
+		<h1>ULTIMAS SOLICITUDES</h1>
+	</CENTER>
+	<div class="segundatabla">
+		<table>
+			<tr>
+				<th>FECHA DE CREDITOS</th>
+				<th>ESTADO</th>
+			</tr>
+			<tr>
+				<td>02/02/2018</td>
+				<td>ACEPTADO</td>
+			</tr>
+			<tr>
+				<td>06/10/2017</td>
+				<td>DENEGADO</td>
+			</tr>
+			<tr>
+				<td>10/05/2017</td>
+				<td>ACEPTADO</td>
+			</tr>
+			<tr>
+				<td>22/10/2016</td>
+				<td>ACEPTADO</td>
+			</tr>
+			<tr>
+				<td>10/10/2015</td>
+				<td>ACEPTADO</td>
+			</tr>
+		</table>
 	</div>
-	</section>
-
-	<section id="boletin">
-	<div class="contenedor">
-		<h1>Quieres que te contacte uno de nuestros ejecutivos</h1>
-		<form>
-			<input type="email" placeholder="Ingrese el Email...">
-			<button type="submit" class="boton1">Subscríbete</button>
-		</form>
-	</div>
-	</section>
-
-	<section id="cajas">
-	<div class="contenedor">
-		<div class="caja">
-			<img src="./img/manos.jpg">
-			<h3>SOMOS TU AVAL</h3>
-			<p>somos el unico banco que te ofrece ser tu propio aval,
-				queremos verte sonreir y nosotros contigo</p>
-		</div>
-		<div class="caja">
-			<img src="./img/convenios.jpg">
-			<h3>CONVENIOS</h3>
-			<p>conoce los diferentes convenios que tenemos para que puedas
-				seguir perfeccionandote</p>
-		</div>
-		<div class="caja">
-			<img src="./img/plataforma.png">
-			<h3>PLATAFORMA DIGITAL</h3>
-			<p>conoce nuestra plataforma en la que podras realizar todos tus
-				tramites con un solo click desde tu celular</p>
-		</div>
-	</div>
-	</section>
-
+	<br>
+	<br>
+	<br>
+	</seccion> </main>
+	<br>
+	<br>
+	<br>
 	<footer>
 	<div class="container-footer-all">
 		<div class="container-body">

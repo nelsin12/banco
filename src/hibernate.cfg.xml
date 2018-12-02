@@ -12,11 +12,10 @@
         <property name="hibernate.search.autoregister_listeners">false</property>
         <property name="hibernate.validator.apply_to_ddl">false</property>
         <mapping resource="pojos/Cliente.hbm.xml" />
-        <mapping resource="pojos/Supervisor.hbm.xml" />
-        <mapping resource="pojos/Persona.hbm.xml" />
-        <mapping resource="pojos/Administrador.hbm.xml" />
+        <mapping resource="pojos/Config.hbm.xml" />
         <mapping resource="pojos/Sucursal.hbm.xml" />
         <mapping resource="pojos/Credito.hbm.xml" />
-        <mapping resource="pojos/Ejecutivo.hbm.xml" />
+        <mapping resource="pojos/Usuario.hbm.xml" />
+        <mapping resource="pojos/Perfil.hbm.xml" />
     </session-factory>
 </hibernate-configuration>

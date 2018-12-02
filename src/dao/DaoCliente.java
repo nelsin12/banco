@@ -1,71 +1,41 @@
 package dao;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
-import javax.persistence.TypedQuery;
+import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 
-import hibernateutil.HibernateUtil;
 import pojos.Cliente;
-import ejb.EjbCliente;
+import hibernateUtil.HibernateUtil;
 
 public class DaoCliente {
 
-	private Session session;
-    ResultSet rs = null; 
-    boolean status = false;
-    
-    public boolean Logins(EjbCliente cliente){
-   	 
-        boolean retorno = false;
-        try {
-            session = HibernateUtil.getSessionFactory().openSession();
-            String login_query = "Select * From cliente WHERE rut_persona = '" + cliente.getRut_persona();
-            TypedQuery<?> query = session.createQuery(login_query);
-            
-            if (query.getSingleResult() != null ) {
-            	
-            	Cliente pojosCliente = new Cliente();
-            	pojosCliente = (Cliente) query.getSingleResult();
-            	if(!pojosCliente.getClaveCliente().equals(cliente.getClave_cliente())){
-            		retorno = false;
-            	}else{
-            		retorno = true;
-            	}                
-            }
-            else
-            {
-                retorno = false;
-            }
-        }catch (Exception e){
-            throw e;
-        }
-        return retorno;
-   }
-    
-    public EjbCliente getCliente(Integer id){
-    	
-    	EjbCliente ejbcliente = new EjbCliente();
-    	try {
-            session = HibernateUtil.getSessionFactory().openSession();
-            String login_query = "Select * From cliente WHERE id_cliente = '" + id;
-            TypedQuery<?> query = session.createQuery(login_query);
-            
-            if (query.getSingleResult() != null ) {
-            	
-            	Cliente pojosCliente = new Cliente();
-            	pojosCliente = (Cliente) query.getSingleResult();
-            	ejbcliente.setApe_materno(pojosCliente.getPersona().getApeMaterno());
-            }
-            else
-            {
-                ejbcliente = null;
-            }
-        }catch (Exception e){
-            throw e;
-        }
-    	return ejbcliente;
-    }
+	//Se define variable Sesion para comunicacion con BD.
+	private static Session session;//¿siempre hay que definir esta variable con cada sessionFactory que instancie? => SessionFactory se instancia solo una vez. El objeto session se instancia usando SessionFactory.
+			
+			
+	//Metodo obtiene registro de Perfil en base a ID			
+	public static boolean checkUserByRUT(Cliente cliente){
+		
+		boolean check = true;//declaro el check como true siempre
+		//Se instancia nueva sesion a partir de Clase SessionFactory de HibernateUtil.
+		session = HibernateUtil.getSessionFactory().openSession();
+		   	 
+		//¿tomo el rut de la tabla cliente y me lo traigo como query?  => Tomas el rut como parametro de busqueda y con ese RUT te traes el registro Cliente.
+		String query_string = "FROM cliente WHERE rut = :rut";
+		Query query = session.createQuery(query_string);
+		
+		//¿llamo al parametro rut atravez de la query y obtengo el rut de este y lo almaceno en una lista? => Esta linea setea el parametro rut de la query con un valor. El resultado de la query se almacena como lista.
+		query.setParameter("rut",cliente.getUsuario().getRut());
+		List results = query.list();
+		
+		if(results.size() == 0){
+			check = false;
+		}
+		
+		return check;//¿quien captura o llama a este return? => EjbCredito:30
+		
+	}
+	
+	
 }

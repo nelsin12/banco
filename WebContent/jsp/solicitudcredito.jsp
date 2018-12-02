@@ -4,8 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="css/index.css">
-<title>pagina principal</title>
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/ejecutivo.css">
+<title>ventana solicitud de credito</title>
 </head>
 <body>
 
@@ -15,59 +16,56 @@
 			<h1>
 				<span class="resaltado">THINK</span> Siempre pensando en ti
 			</h1>
+			<br>
 		</div>
 		<nav>
 		<ul>
-			<li class="actual"><a href="index.html">Inicio</a></li>
-			<li><a href="contacto.html">Contacto</a></li>
-			<li><a href="login.html">Ingresar</a></li>
-			<li><a href="SolicitudCredito.html">solicitar credito</a></li>
+			<li class="actual"><a href="#">Cerrar Sesion </a></li>
+			<li><a href="login.html">| X |</a></li>
 		</ul>
 		</nav>
 	</div>
 	</header>
+	<br>
+	<br>
+	<!--ACA ESTA EL MENU-->
+	<nav class="navegacion">
+	<ul class="menu">
+		<li><a href="EjecutivoPrincipal.html">Estados</a></li>
+		<li><a href="EjecutivoSoliciudDeCredito.html">Nuevas
+				Solicitudes</a></li>
 
-	<section id="cabecera">
-	<div class="contenedor">
-		<h1>Ejecutivos las 24 horas del dia, 7 dias a la semana</h1>
-		<p>Acercate y contactate con nosotros, hecha a volar tu
-			imaginacion y concreta tus proyectos.</p>
-	</div>
-	</section>
+	</ul>
+	</nav>
+	<main> <br>
+	<br>
+	<!--formulario-->
+	<form action="">
+		<h2>SOLICITUD CREDITO</h2>
+		<input type="text" name="NCredito"
+			placeholder="INGRESE LOS DATOS SOLICITADOS...">
+		<CENTER>
+			<h3>Datos del Solicitante</h3>
+		</CENTER>
+		<input type="text" name="numerocredito"
+			placeholder="numero de su credito"> <input type="text"
+			name="rut" placeholder="Ingrese su rut"> <input type="text"
+			name="monto" placeholder="ingrese monto a solicitar"> <input
+			type="text" name="cuotas" placeholder="ingrese el numero de cuotas">
+		<a>el numero maximo de cuotas es 48, si excedes este numero se
+			cobrara un interes del 3%</a> <input type="text" name="fechaautorizacion"
+			placeholder="fecha de autorizacion"> <input type="text"
+			name="fechaposibleentraga" placeholder="fecha posible de entrega">
 
-	<section id="boletin">
-	<div class="contenedor">
-		<h1>Quieres que te contacte uno de nuestros ejecutivos</h1>
-		<form>
-			<input type="email" placeholder="Ingrese el Email...">
-			<button type="submit" class="boton1">Subscríbete</button>
-		</form>
-	</div>
-	</section>
 
-	<section id="cajas">
-	<div class="contenedor">
-		<div class="caja">
-			<img src="./img/manos.jpg">
-			<h3>SOMOS TU AVAL</h3>
-			<p>somos el unico banco que te ofrece ser tu propio aval,
-				queremos verte sonreir y nosotros contigo</p>
-		</div>
-		<div class="caja">
-			<img src="./img/convenios.jpg">
-			<h3>CONVENIOS</h3>
-			<p>conoce los diferentes convenios que tenemos para que puedas
-				seguir perfeccionandote</p>
-		</div>
-		<div class="caja">
-			<img src="./img/plataforma.png">
-			<h3>PLATAFORMA DIGITAL</h3>
-			<p>conoce nuestra plataforma en la que podras realizar todos tus
-				tramites con un solo click desde tu celular</p>
-		</div>
-	</div>
-	</section>
-
+		<input type="button" value="Enviar" id="boton">
+	</form>
+	<br>
+	<br>
+	</main>
+	<br>
+	<br>
+	<br>
 	<footer>
 	<div class="container-footer-all">
 		<div class="container-body">
