@@ -18,10 +18,10 @@
 		</div>
 		<nav>
 		<ul>
-			<li class="actual"><a href="index.html">Inicio</a></li>
-			<li><a href="contacto.html">Contacto</a></li>
-			<li><a href="login.html">Ingresar</a></li>
-			<li><a href="SolicitudCredito.html">solicitar credito</a></li>
+			<li class="actual"><a href="index.jsp">Inicio</a></li>
+			<li><a href="contacto.jsp">Contacto</a></li>
+			<li><a href="login.jsp">Ingresar</a></li>
+			<li><a href="SolicitudCredito.jsp">solicitar credito</a></li>
 		</ul>
 		</nav>
 	</div>
